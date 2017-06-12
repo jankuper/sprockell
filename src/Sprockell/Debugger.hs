@@ -8,7 +8,7 @@ import Control.Monad (when, void)
 -- to an IO action returning an potentially updated debugger state and SystemState.
 type DebuggerF st = st -> SystemState -> IO (st, SystemState)
 
--- |  A Debugger is a combination of a 'DebuggerF' and it's initial state.
+-- |  A Debugger is a combination of a 'DebuggerF' and its initial state.
 type Debugger  st = (DebuggerF st, st)
 
 
